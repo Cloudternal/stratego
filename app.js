@@ -1,8 +1,13 @@
 var express = require('express');
 var app = express();
 
-app.get('/', function (req, res) {
-    res.send('hello, david');
-});
+var path = require('path');
+
+app.set('view engine', 'jade');
+app.set('views', path.join(__dirname, 'views')); 
 
 app.listen(process.env.PORT);
+
+app.get('/', function (req, res) {
+    res.render('home');
+});
