@@ -1,0 +1,4 @@
+loggingEnabled: true
+devErrorsEnabled: true  
+watchedFiles: *.js;*.yml;node_modules\*;routes\*.js;views\*.jade;views\admin\*.jade;middleware\*.js;public\js\*.js
+debuggingEnabled: true
