@@ -9,5 +9,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.listen(process.env.PORT);
 
 app.get('/', function (req, res) {
-    res.render('home');
+    app.render('home', function (err, html) {
+        if (err) {
+            res.send(err);
+        } else {
+            res.send(html);
+        }
+    });
 });
