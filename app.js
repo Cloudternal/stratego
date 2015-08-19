@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+var bodyParser = require('body-parser');
 
 //
 // configuration
@@ -11,6 +12,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.locals.pretty = true;
 app.locals.doctype = 'html';
 app.locals.basedir = app.get('views');
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //
 // run
