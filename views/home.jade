@@ -9,7 +9,12 @@ html(lang='en')
         .col-sm-4.col-sm-offset-4
           h1 Stratego
           button#start.btn.btn-primary Start
-          
+          form#play
+            input.form-control(type='text', name='name', placeholder='Enter your name', required)
+            button.btn.btn-success.btn-lg.btn.block(type='submit') Play
+          .tag1
+          .tag2
+          .tag3
     script(src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js')
     script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
     script(src='js/stratego.js')

@@ -44,3 +44,13 @@ app.post('/start', function (req, res) {
         }
     });
 });
+
+app.post('/play', function (req, res) {
+    app.render('play', { name: req.body.name }, function (err, html) {
+        if (err) {
+            res.send();
+        } else {
+            res.send(['Success', html]);
+        }
+    });
+});
