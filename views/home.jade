@@ -4,12 +4,14 @@ html(lang='en')
   head
     title Stratego
     link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+    style.
+      .square{width: 5rem; height: 5rem;}
   body
     .container-fluid
-      - for (r = 0; r < 10; r++)
+      - for (r = 1; r <= 10; r++)
         .row
-          - for (c = 0; c < 10; c++) 
-            button.btn.bt-default= r + ',' + c
+          - for (c = 1; c <= 10; c++) 
+            button.btn.btn-default.square= r  + ',' + c 
     script(src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js')
     script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
     script(src='js/stratego.js')
