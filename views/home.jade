@@ -1,3 +1,4 @@
+//use container-fluid for the entire browser window
 doctype html
 html(lang='en')
   head
@@ -5,16 +6,10 @@ html(lang='en')
     link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
   body
     .container-fluid
-      .row
-        .col-sm-4.col-sm-offset-4
-          h1 Stratego
-          button#start.btn.btn-primary Start
-          form#play
-            input.form-control(type='text', name='name', placeholder='Enter your name', required)
-            button.btn.btn-success.btn-lg.btn.block(type='submit') Play
-          .tag1
-          .tag2
-          .tag3
+      - for (r = 0; r < 10; r++)
+        .row
+          - for (c = 0; c < 10; c++) 
+            button.btn.bt-default= r + ',' + c
     script(src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js')
     script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
     script(src='js/stratego.js')
