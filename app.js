@@ -31,3 +31,14 @@ app.get('/', function (req, res) {
         }
     });
 });
+
+app.post('/start', function (req, res) {
+    app.render('greetings', { msg: req.body.msg, name: req.body.name }, function (err, html) {
+        if (err) {
+            console.log(err);
+            res.send();
+        } else {
+            res.send(['Success', html]);
+        }
+    });
+});
