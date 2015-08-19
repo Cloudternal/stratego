@@ -34,23 +34,6 @@ app.get('/', function (req, res) {
     });
 });
 
-app.post('/start', function (req, res) {
-    app.render('greetings', { msg: req.body.msg, name: req.body.name }, function (err, html) {
-        if (err) {
-            console.log(err);
-            res.send();
-        } else {
-            res.send(['Success', html]);
-        }
-    });
-});
-
-app.post('/play', function (req, res) {
-    app.render('play', { name: req.body.name }, function (err, html) {
-        if (err) {
-            res.send();
-        } else {
-            res.send(['Success', html]);
-        }
-    });
+app.post('/squareclicked', function (req, res) {
+    res.send(['Success', req.body.square + ' clicked']);
 });

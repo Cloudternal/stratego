@@ -1,15 +1,13 @@
 $(function () {
-    $('#start').on('click', function () {
-        alert('Starting Stratego!');
+    $('button.square').on('click', function () {
+      alert("Button " + $(this).val());
         $.ajax({
             method: 'post',
-            url: '/start',
+            url: '/squareclicked',
             data: {
-                msg: 'hello',
-                name: 'david'
+                square: $(this).val()
             },
             success: function (data) {
-                alert('success!');
                 if (!data) {
                     alert('rendering error');
                     return;
@@ -17,36 +15,7 @@ $(function () {
                 switch (data[0]) {
                 case 'Success':
                     if (data[1]) {
-                        $('.tag1').html(data[1]);
-                    }
-                    break;
-                default: break;
-                }
-            },
-            error: function () {
-                alert('error!');
-            },
-            complete: function () {
-                alert('complete!');
-            }
-        });
-    });
-    $('#play').on('submit', function (e) {
-        e.preventDefault();
-        $.ajax({
-            method: 'post',
-            url: '/play',
-            data: $(this).serialize(),
-            success: function (data) {
-                alert('success!');
-                if (!data) {
-                    alert('rendering error');
-                    return;
-                }
-                switch (data[0]) {
-                case 'Success':
-                    if (data[1]) {
-                        $('.tag2').html(data[1]);
+                        $('.alert').html(data[1]);
                     }
                     break;
                 default: break;
