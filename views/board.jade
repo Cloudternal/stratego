@@ -1,0 +1,8 @@
+.container-fluid
+  - for (r = 1; r <= 10; r++)
+    .row
+      - for (c = 1; c <= 10; c++) 
+        button.btn.btn-default.square(value= (r - 1) * 10 + c)= r  + ',' + c
+.alert.alert-info= name
+- if (waiting)
+  .alert.alert-warning Waiting for opponent.

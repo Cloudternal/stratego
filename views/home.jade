@@ -5,14 +5,12 @@ html(lang='en')
     title Stratego
     link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
     style.
-      .square{width: 7.5rem; height: 7.5rem;}
+      .square{width: 7rem; height: 7rem;}
   body
-    .container-fluid
-      - for (r = 1; r <= 10; r++)
-        .row
-          - for (c = 1; c <= 10; c++) 
-            button.btn.btn-default.square(value= (r - 1) * 10 + c)= r  + ',' + c
-    .alert.alert-success No squares have been clicked.
+    .alert.alert-info Welcome to Stratego.
+    form#play
+      input.form-control(type='text', name='name', placeholder='Enter your name', required)
+      button.btn.btn-primary.btn-lg(type='submit') Start
     script(src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js')
     script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
     script(src='js/stratego.js')
