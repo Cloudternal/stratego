@@ -53,6 +53,9 @@ $(function () {
             },
             error: function () {
                 alert('error!');
+            },
+            complete: function () {
+                alert('Complete!');
             }
         });
     });
