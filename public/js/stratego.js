@@ -29,7 +29,7 @@ $(function () {
                 }
           });
     });
-    $('form#play').on('submit', function (e) {
+    $('#play').on('submit', function (e) {
         e.preventDefault();
         $.ajax({
             method: 'post',
