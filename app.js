@@ -39,7 +39,7 @@ app.post('/squareclicked', function (req, res) {
 });
 
 var players = [];
-app.post('/start', function (req, res) {
+app.post('/gamestart', function (req, res) {
     if (players.length >= 2) {
         players = []
     } 
