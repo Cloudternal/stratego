@@ -37,3 +37,19 @@ app.get('/', function (req, res) {
 app.post('/squareclicked', function (req, res) {
     res.send(['Success', req.body.square + ' clicked']);
 });
+
+var players = [];
+app.post('/gamestart', function (req, res) {
+    if (players.length >= 2) {
+        players = []
+    } 
+    players.push(req.body.name)
+    app.render('board', { name: req.body.name, players: players, waiting: players.length == 2 }, function (err, html) {
+        if (err) {
+            console.log(err);
+            res.send();
+        } else {
+            res.send(['Success', html]);
+        }
+    });
+});
