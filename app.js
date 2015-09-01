@@ -25,7 +25,7 @@ app.listen(process.env.PORT);
 //
 
 app.get('/', function (req, res) {
-    app.render('home', function (err, html) {
+    app.render('app', function (err, html) {
         if (err) {
             res.send('err: ' + err);
         } else {
@@ -33,7 +33,7 @@ app.get('/', function (req, res) {
         }
     });
 });
-
+/*
 app.post('/squareclicked', function (req, res) {
     res.send(['Success', req.body.square + ' clicked']);
 });
@@ -52,4 +52,4 @@ app.post('/gamestart', function (req, res) {
             res.send(['Success', html]);
         }
     });
-});
+});*/
