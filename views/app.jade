@@ -7,11 +7,14 @@ html(lang='en')
     style.
       .square{width: 7rem; height: 7rem;}
   body
-    h1 test
-    .alert.alert-info Welcome to Stratego.
-    form#start
-      input.form-control(type='text', name='name', placeholder='Enter your name', required)
-      button.btn.btn-primary.btn-lg(type='submit') Start
+    .container-fluid
+      .row
+        .col-xs-12
+          .center-block
+            button Play
+      .row
+        .col-xs-8
+        .col-xs-4
     script(src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js')
     script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
-    script(src='js/stratego.js')
+    script(src='js/app.js')
