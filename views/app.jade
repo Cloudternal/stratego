@@ -13,7 +13,16 @@ html(lang='en')
           button.center-block Play
       .row
         .col-xs-8
+          .container-fluid
+            - for (r = 1; r <= 10; r++)
+              .row
+              - for (c = 1; c <= 10; c++)
+                  button
         .col-xs-4
+          .row
+            .container-fluid
+          .row
+            .container-fluid
     script(src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js')
     script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
     script(src='js/app.js')
